@@ -1,10 +1,10 @@
 <html>
 <body>
-<h3>git</h3>
+<h3>git...</h3>
 <?php
-$output = shell_exec("git clone 2>&1");
+#$output = shell_exec("git clone 2>&1");
 #$output = shell_exec("git clone https://github.com/michallangner/pr01.git 2>&1");
-#$output = shell_exec("git --git-dir=/var/www/pr01/.git --work-tree=/var/www/pr01 pull 2>&1");
+$output = shell_exec("git --git-dir=/var/www/pr01/.git --work-tree=/var/www/pr01 pull 2>&1");
 #$output = shell_exec("git --git-dir=/var/www/pr01/.git --work-tree=/var/www/pr01 status 2>&1");
 
 echo "<p>$output</p>";
