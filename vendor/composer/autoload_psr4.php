@@ -6,4 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
+    'PhpOption\\' => array($vendorDir . '/phpoption/phpoption/src/PhpOption'),
+    'PHPOnCouch\\Exceptions\\' => array($vendorDir . '/php-on-couch/php-on-couch/src/Exceptions'),
+    'PHPOnCouch\\Adapter\\' => array($vendorDir . '/php-on-couch/php-on-couch/src/Adapter'),
+    'PHPOnCouch\\' => array($vendorDir . '/php-on-couch/php-on-couch/src'),
+    'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
 );
