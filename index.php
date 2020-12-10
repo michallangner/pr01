@@ -19,7 +19,6 @@ $cfg = require $config;
 
 echo "<h4> 02 </h4>";
 
-echo $cfg['user'];
 
 //We import the classes that we need
 use PHPOnCouch\CouchClient;
@@ -32,7 +31,7 @@ $dsn = str_replace('(user)',$cfg['user'],$dsn);
 $dsn = str_replace('(pass)',$cfg['pass'],$dsn);
 $dsn = str_replace('(host)',$cfg['host'],$dsn);
 $dsn = str_replace('(port)',$cfg['port'],$dsn);
-echo $dsn;
+echo "dsn: ".$dsn."<br/>";
 
 try {
     $client = new CouchClient('http://slftst:@Meka!23@146.59.17.22:5984', 'myownpocket');
@@ -44,7 +43,7 @@ try {
 echo "<h4> 03... </h4>";
 
 //We create the database if required
-try {
+try {    
     if (!$client->databaseExists()) {
         echo "db create...";
         $client->createDatabase();
