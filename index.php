@@ -36,6 +36,10 @@ echo "dsn: ".$dsn."<br/>";
 try {
     $client = new CouchClient('http://slftst:@Meka!23@146.59.17.22:5984', 'myownpocket');
     #$client = new CouchClient($dsn,'slftst01');
+    echo "<hr/>";
+    echo $client->dsn();
+    $cookie = $client->getSessionCookie();
+    echo "cookie: ".$cookie."<br/>";
 } catch (Exception $ex) {
     echo "dupa";
     echo $ex->getMessage();
