@@ -3,10 +3,11 @@
 <h1>index.php</h1>
 <?php
 
+echo "<h4> 00 </h4>";
 
 //We need to use an autoloader to import PHPOnCouch classes
 //I will use composer's autoloader for this demo
-$autoloader = join(DIRECTORY_SEPARATOR,[__DIR__,'vendor','Autoload.php']);
+$autoloader = join(DIRECTORY_SEPARATOR,[__DIR__,'vendor','autoload.php']);
 require $autoloader;
 
 echo "<h4> 01 </h4>";
