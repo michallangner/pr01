@@ -42,7 +42,7 @@ echo "<h4> 02y </h4>";
 #$client = new CouchClient('http://:manager1@146.59.17.22:5984','myownpocket');
 $client = new CouchClient($dsn,'slftst01');
 
-echo "<h4> 03 </h4>";
+echo "<h4> 03... </h4>";
 
 //We create the database if required
 if(!$client->databaseExists()){
@@ -50,10 +50,12 @@ if(!$client->databaseExists()){
     echo "db created!";
 }
 
+echo "<h4> 04 </h4>";
+
 //We get the database info just for the demo
 var_dump($client->getDatabaseInfos());
 
-echo "<h4> 04 </h4>";
+echo "<h4> 05 </h4>";
 
 //Note:  Every request should be inside a try catch since CouchExceptions could be thrown.For example, let's try to get a unexisting document
 
