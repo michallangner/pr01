@@ -6,6 +6,8 @@
 $autoloader = join(DIRECTORY_SEPARATOR,[__DIR__,'vendor','Autoload.php']);
 require $autoloader;
 
+echo "<h4> 01 </h4>";
+
 //We import the classes that we need
 use PHPOnCouch\CouchClient;
 use PHPOnCouch\Exceptions;
