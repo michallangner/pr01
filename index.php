@@ -42,9 +42,9 @@ echo "<h4> 02y </h4>";
 try {
     $client = new CouchClient('http://slftst:@Meka!23@146.59.17.22:5984', 'myownpocket');
     #$client = new CouchClient($dsn,'slftst01');
-} catch (Exceptions $ex) {
+} catch (Exception $ex) {
     echo "dupa";
-    echo $ex;
+    echo $ex->getMessage();
 }
 echo "<h4> 03... </h4>";
 
@@ -56,8 +56,8 @@ try {
     } else {
         echo "nop";
     }
-} catch (Exceptions $ex) {
-    echo $ex;
+} catch (Exception $ex) {
+    echo $ex->getMessage();
 }
 
 echo "<h4> 04 </h4>";
