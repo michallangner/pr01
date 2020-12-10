@@ -1,3 +1,6 @@
+<html>
+<body>
+<h1>index.php</h1>
 <?php
 
 
@@ -38,3 +41,5 @@ catch(Exceptions\CouchNotFoundException $ex){
 phpinfo();
 
 ?>
+</body>
+</html>
