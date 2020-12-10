@@ -36,8 +36,9 @@ echo "dsn: ".$dsn."<br/>";
 $my_database = "myownpocket(public)";
 try {
     if (CouchClient::isValidDatabaseName($my_database)) {
-        echo "okok";
+        echo "okok<br/>";
         $client = new CouchClient("http://slftst:@Meka!23@146.59.17.22:5984/", $my_database);
+        echo "done!<br/>";
     } else {
         echo "nono";
         die("Invalid database name");
@@ -45,9 +46,13 @@ try {
 } catch (Exception $ex) {
     echo $ex->getMessage();
 }
-
-$dbs = $client->listDatabases();
-print_r($dbs); // array ('first_database','another_database')
+echo "<br/>list...<br/>";
+try {
+    $dbs = $client->listDatabases();
+    print_r($dbs); // array ('first_database','another_database')
+} catch (Exception $ex) {
+    echo $ex->getMessage();
+}
 
 try {
     $client = new CouchClient('http://slftst:@Meka!23@146.59.17.22:5984', 'myownpocket');
