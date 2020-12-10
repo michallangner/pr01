@@ -39,9 +39,13 @@ echo "<h4> 02x </h4>";
 echo $dsn;
 echo "<h4> 02y </h4>";
 
-$client = new CouchClient('http://slftst:@Meka!23@146.59.17.22:5984','myownpocket');
-#$client = new CouchClient($dsn,'slftst01');
-
+try {
+    $client = new CouchClient('http://slftst:@Meka!23@146.59.17.22:5984', 'myownpocket');
+    #$client = new CouchClient($dsn,'slftst01');
+} catch (Exceptions $ex) {
+    echo "dupa";
+    echo $ex;
+}
 echo "<h4> 03... </h4>";
 
 //We create the database if required
