@@ -27,17 +27,12 @@ use PHPOnCouch\Exceptions;
 
 //We create a client to access the database
 
-echo "<h4> 02a </h4>";
 $dsn = 'http://(user):(pass)@(host):(port)';
-echo "<h4> 02b </h4>";
 $dsn = str_replace('(user)',$cfg['user'],$dsn);
-echo "<h4> 02c </h4>";
 $dsn = str_replace('(pass)',$cfg['pass'],$dsn);
 $dsn = str_replace('(host)',$cfg['host'],$dsn);
 $dsn = str_replace('(port)',$cfg['port'],$dsn);
-echo "<h4> 02x </h4>";
 echo $dsn;
-echo "<h4> 02y </h4>";
 
 try {
     $client = new CouchClient('http://slftst:@Meka!23@146.59.17.22:5984', 'myownpocket');
@@ -51,6 +46,7 @@ echo "<h4> 03... </h4>";
 //We create the database if required
 try {
     if (!$client->databaseExists()) {
+        echo "db create...";
         $client->createDatabase();
         echo "db created!";
     } else {
