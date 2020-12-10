@@ -47,7 +47,7 @@ catch(Exceptions\CouchNotFoundException $ex){
 }
 echo $doc->_id.' revision '.$doc->_rev;
 echo "<hr/>";
-print_r($doc);
+print_r(json_encode($doc));
 
 // Show all information, defaults to INFO_ALL
 phpinfo();
