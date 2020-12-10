@@ -26,12 +26,19 @@ use PHPOnCouch\CouchClient;
 use PHPOnCouch\Exceptions;
 
 //We create a client to access the database
+
+echo "<h4> 02a </h4>";
 $dsn = 'http://(user):(pass)@(host):(port)';
+echo "<h4> 02b </h4>";
 $dsn = str_replace('(user)',$cfg['user'],$dsn);
+echo "<h4> 02c </h4>";
 $dsn = str_replace('(pass)',$cfg['pass'],$dsn);
 $dsn = str_replace('(host)',$cfg['host'],$dsn);
 $dsn = str_replace('(port)',$cfg['port'],$dsn);
+echo "<h4> 02x </h4>";
 echo $dsn;
+echo "<h4> 02y </h4>";
+
 #$client = new CouchClient('http://:manager1@146.59.17.22:5984','myownpocket');
 $client = new CouchClient($dsn,'slftst01');
 
