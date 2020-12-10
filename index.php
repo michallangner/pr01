@@ -45,9 +45,13 @@ $client = new CouchClient($dsn,'slftst01');
 echo "<h4> 03... </h4>";
 
 //We create the database if required
-if(!$client->databaseExists()){
-    $client->createDatabase();
-    echo "db created!";
+try {
+    if (!$client->databaseExists()) {
+        $client->createDatabase();
+        echo "db created!";
+    }
+} catch (Exceptions $ex) {
+    echo $ex;
 }
 
 echo "<h4> 04 </h4>";
