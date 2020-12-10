@@ -37,7 +37,8 @@ $my_database = "myownpocket(public)";
 try {
     if (CouchClient::isValidDatabaseName($my_database)) {
         echo "okok<br/>";
-        $client = new CouchClient("http://slftst:aMeka\!23@146.59.17.22:5984/", $my_database);
+#        $client = new CouchClient("http://slftst:aMeka!23@146.59.17.22:5984/", $my_database);
+        $client = new CouchClient($dsn, $cfg['name']);
         echo "done!<br/>";
     } else {
         echo "nono";
@@ -55,7 +56,8 @@ try {
 }
 
 try {
-    $client = new CouchClient('http://slftst:aMeka!23@146.59.17.22:5984', 'myownpocket');
+#    $client = new CouchClient('http://slftst:aMeka!23@146.59.17.22:5984', 'myownpocket');
+    $client = new CouchClient($dsn, $cfg['name']);
     #$client = new CouchClient($dsn,'slftst01');
     echo "<hr/>";
     echo $client->dsn();
