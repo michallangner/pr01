@@ -46,6 +46,8 @@ catch(Exceptions\CouchNotFoundException $ex){
         echo 'Document not found';
 }
 echo $doc->_id.' revision '.$doc->_rev;
+echo "<hr/>";
+print_r($doc);
 
 // Show all information, defaults to INFO_ALL
 phpinfo();
