@@ -34,10 +34,16 @@ $dsn = str_replace('(port)',$cfg['port'],$dsn);
 echo "dsn: ".$dsn."<br/>";
 
 $my_database = "myownpocket(public)";
-if ( CouchClient::isValidDatabaseName($my_database) ) {
-    $client = new CouchClient("http://slftst:@Meka!23@146.59.17.22:5984/",$my_database);
-} else {
-    die("Invalid database name");
+try {
+    if (CouchClient::isValidDatabaseName($my_database)) {
+        echo "okok";
+        $client = new CouchClient("http://slftst:@Meka!23@146.59.17.22:5984/", $my_database);
+    } else {
+        echo "nono";
+        die("Invalid database name");
+    }
+} catch (Exception $ex) {
+    echo $ex->getMessage();
 }
 
 $dbs = $client->listDatabases();
