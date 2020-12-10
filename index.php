@@ -49,6 +49,8 @@ try {
     if (!$client->databaseExists()) {
         $client->createDatabase();
         echo "db created!";
+    } else {
+        echo "nop";
     }
 } catch (Exceptions $ex) {
     echo $ex;
