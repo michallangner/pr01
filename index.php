@@ -31,6 +31,7 @@ $dsn = str_replace('(user)',$cfg['user'],$dsn);
 $dsn = str_replace('(pass)',$cfg['pass'],$dsn);
 $dsn = str_replace('(host)',$cfg['host'],$dsn);
 $dsn = str_replace('(port)',$cfg['port'],$dsn);
+echo $dsn;
 #$client = new CouchClient('http://:manager1@146.59.17.22:5984','myownpocket');
 $client = new CouchClient($dsn,'slftst01');
 
