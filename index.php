@@ -39,8 +39,8 @@ echo "<h4> 02x </h4>";
 echo $dsn;
 echo "<h4> 02y </h4>";
 
-#$client = new CouchClient('http://:manager1@146.59.17.22:5984','myownpocket');
-$client = new CouchClient($dsn,'slftst01');
+$client = new CouchClient('http://slftst:@Meka!23@146.59.17.22:5984','myownpocket');
+#$client = new CouchClient($dsn,'slftst01');
 
 echo "<h4> 03... </h4>";
 
